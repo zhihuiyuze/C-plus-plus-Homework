@@ -21,13 +21,15 @@ void PT(int **arr, int num) {
 
 int main() {
     int number;
-    std::cout << "enter a number";  
-    std::cin >> number;              
+    std::cout << "enter an number";  
+    std::cin >> number;   
+               
     int **array = new int*[number];
     for (int j = 0; j < number; j++) {
         array[j] = new int[j+1];
         std::memset(array[j], 0, sizeof(int) * (j+1));
     }
+
     PT(array, number);
 
     for (int i = 0; i < number; i++) {
